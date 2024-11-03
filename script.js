@@ -100,4 +100,5 @@ equals.addEventListener("click", () => {
     result.innerHTML = currentNumber;
     operator = "";
     storedNumber = 0;
+    currentNumber = 0;
 });
