@@ -1,0 +1,52 @@
+body {
+    background-color: antiquewhite;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    height: 50vh;
+    width: 240px;
+    flex-direction: column;
+    gap: 20px;
+    flex-wrap: wrap;
+    background-color: gray;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 5px 5px;
+    border: solid;
+}
+#result {
+    background-color: darkgray;
+    font-size: large;
+    height: 50px;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    border: solid 5px;
+}
+.buttons {
+    display: flex;
+    margin: 2px;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.num, #divide, #times, #minus, #equals, #plus, #clear {
+    width: 52px;
+    height: 52px;
+    border-radius: 26px;
+    border: 0px;
+    box-shadow: 3px 3px;
+}
+
+#divide:hover, #times:hover, #minus:hover, #equals:hover, #plus:hover, #clear:hover, .num:hover {
+    box-shadow: 1px 1px;
+}
