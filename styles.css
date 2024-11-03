@@ -45,8 +45,11 @@ body {
     border-radius: 26px;
     border: 0px;
     box-shadow: 3px 3px;
+
+    
 }
 
-#divide:hover, #times:hover, #minus:hover, #equals:hover, #plus:hover, #clear:hover, .num:hover {
+#divide:active, #times:active, #minus:active, #equals:active, #plus:active, #clear:active, .num:active {
     box-shadow: 1px 1px;
+    background-color: #d9d9d9;
 }

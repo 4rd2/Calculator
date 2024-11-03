@@ -91,7 +91,7 @@ times.addEventListener("click", () => {
 const clear = document.getElementById('clear');
 clear.addEventListener("click", () => {
     currentNumber = 0
-    result.innerHTML = currentNumber;
+    result.innerHTML = "";
 });
 
 const equals = document.getElementById('equals');
