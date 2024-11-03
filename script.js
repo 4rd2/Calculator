@@ -52,7 +52,7 @@ buttons.forEach((button) => {
 const plus = document.getElementById('plus');
 plus.addEventListener("click", () => {
     result.innerHTML = plus.innerHTML;
-    storedNumber = currentNumber;
+    storedNumber += currentNumber;
     currentNumber = 0;
     operator = "plus"
     plus.style.boxShadow = "0 px 0px";
@@ -60,21 +60,31 @@ plus.addEventListener("click", () => {
 const minus = document.getElementById('minus');
 minus.addEventListener("click", () => {
     result.innerHTML = minus.innerHTML;
-    storedNumber = currentNumber;
+    storedNumber -= currentNumber;
     currentNumber = 0;
     operator = "minus"
 });
 const divide = document.getElementById('divide');
 divide.addEventListener("click", () => {
     result.innerHTML = divide.innerHTML;
-    storedNumber = currentNumber;
+    if (storedNumber != 0) {
+        storedNumber /= currentNumber;
+    }
+    else {
+        storedNumber = currentNumber;
+    }
     currentNumber = 0;
     operator = "divide"
 });
 const times = document.getElementById('times');
 times.addEventListener("click", () => {
     result.innerHTML = times.innerHTML;
-    storedNumber = currentNumber;
+    if (storedNumber != 0) {
+        storedNumber *= currentNumber;
+    }
+    else {
+        storedNumber = currentNumber;
+    }
     currentNumber = 0;
     operator = "times"
 });
@@ -89,4 +99,5 @@ equals.addEventListener("click", () => {
     currentNumber = operate(operator,storedNumber,currentNumber);
     result.innerHTML = currentNumber;
     operator = "";
+    storedNumber = 0;
 });

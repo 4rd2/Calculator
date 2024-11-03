@@ -3,9 +3,9 @@ body {
     display: flex; 
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     height: 100vh;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    flex-direction: column;
 }
 
 .container {
