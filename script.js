@@ -45,6 +45,7 @@ function operate(operator, x, y) {
 //Gives buttons interactability
 buttons.forEach((button) => {
     button.addEventListener("click", () => {
+
         currentNumber = currentNumber * 10 + parseInt(button.innerHTML);
         result.innerHTML = currentNumber;
     });
@@ -60,7 +61,7 @@ plus.addEventListener("click", () => {
 const minus = document.getElementById('minus');
 minus.addEventListener("click", () => {
     result.innerHTML = minus.innerHTML;
-    storedNumber -= currentNumber;
+    storedNumber = currentNumber;
     currentNumber = 0;
     operator = "minus"
 });
@@ -79,18 +80,21 @@ divide.addEventListener("click", () => {
 const times = document.getElementById('times');
 times.addEventListener("click", () => {
     result.innerHTML = times.innerHTML;
-    if (storedNumber != 0) {
-        storedNumber *= currentNumber;
+    console.log(storedNumber);
+    console.log(currentNumber);
+    if (storedNumber === 0) {
+        storedNumber = 1;
     }
-    else {
-        storedNumber = currentNumber;
-    }
+    storedNumber *= currentNumber;
     currentNumber = 0;
     operator = "times"
+    console.log(storedNumber);
+    console.log(currentNumber);
 });
 const clear = document.getElementById('clear');
 clear.addEventListener("click", () => {
-    currentNumber = 0
+    storedNumber = 0;
+    currentNumber = 0;
     result.innerHTML = "";
 });
 
@@ -99,6 +103,6 @@ equals.addEventListener("click", () => {
     currentNumber = operate(operator,storedNumber,currentNumber);
     result.innerHTML = currentNumber;
     operator = "";
-    storedNumber = 0;
+    storedNumber = currentNumber;
     currentNumber = 0;
 });
